@@ -20,3 +20,5 @@ GNOME_RANDR_PATH_DEFAULT="/usr/bin/gnome-randr.py"
 OUTPUT_DISPLAY_DEFAULT="HDMI-1"
 TOUCHSCREEN_DEVICE_DEFAULT="WingCool Inc. TouchScreen"
 ```
+### WIP 
+add some diagnostics to check output and device name
