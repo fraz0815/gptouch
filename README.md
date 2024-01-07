@@ -31,6 +31,16 @@
 3. Select the desired screen orientation from the GUI options.
 4. Confirm the changes and, if necessary, approve the system reboot to apply them.
 
+## Hints
+
+1. Get current output name, e.g. `HDMI-1` or `DP-3` etc:
+`/path/to/gnome-randr.py --current`
+
+3. Get touchscreen device name:
+`lsusb`
+or 
+`sudo dmesg | grep -i touch`
+
 ## Notes
 
 - This script is specifically tailored for GNOME on Wayland. Compatibility may vary based on system configurations and GNOME/Wayland versions.
