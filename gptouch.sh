@@ -74,11 +74,8 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     echo 'Rotating the display ...'
     update_orientation "$rotation"
     echo    
-    echo 'And finally to get new udev rule working:'
-    echo 'Press KVM Switch twice or replug USB-C power from display'
-    echo
- # Displaying hint to the user about the KVM switch
-    zenity --info --text="The screen orientation has been updated.\nPlease press the KVM switch button twice to reinitialize the display settings. The button is located right next to the VESA monitor casing." --width=300
+# Displaying hint to the user about the KVM switch
+    zenity --info --text="The screen orientation has been updated.\nPlease press the KVM switch button twice to reinitialize the display settings. The button is located right next to the VESA monitor casing.\nOr simply replug USB-C power cable" --width=300
 else
     zenity --info --text="Update cancelled. No changes were made."
 fi
