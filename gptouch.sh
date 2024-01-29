@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Default values
-GNOME_RANDR_PATH_DEFAULT="/usr/bin/gnome-randr.py"
-OUTPUT_DISPLAY_DEFAULT="HDMI-1"
-TOUCHSCREEN_DEVICE_DEFAULT="WingCool Inc. TouchScreen"
+GNOME_RANDR_PATH="/usr/bin/gnome-randr.py"
+OUTPUT_DISPLAY="HDMI-1"
+TOUCHSCREEN_DEVICE="WingCool Inc. TouchScreen"
 
 # Check for Zenity
 if ! command -v zenity &> /dev/null; then
@@ -16,12 +16,6 @@ if ! [ -x "$GNOME_RANDR_PATH" ]; then
     echo "gnome-randr.py not found or not executable at $GNOME_RANDR_PATH. Aborting..."
     exit 1
 fi
-
-
-GNOME_RANDR_PATH="$GNOME_RANDR_PATH_DEFAULT"
-OUTPUT_DISPLAY="$OUTPUT_DISPLAY_DEFAULT"
-TOUCHSCREEN_DEVICE="$TOUCHSCREEN_DEVICE_DEFAULT"
-
 
 # Function to update the udev rule for touchscreen calibration
 update_touchscreen_calibration() {
@@ -79,5 +73,3 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 else
     zenity --info --text="Update cancelled. No changes were made."
 fi
-
-
