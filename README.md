@@ -6,8 +6,7 @@
 
 - Rotate the screen to various orientations: landscape, portrait (right or left), or inverted.
 - Automatically adjust the touchscreen calibration to align with the screen orientation.
-- Customize script paths and device identifiers via a GUI.
-- Apply changes and reboot the system with user confirmation.
+- Apply changes, restart udev and prompt user to press KVM Switch next to monitor
 
 ## Requirements
 
