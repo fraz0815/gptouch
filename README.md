@@ -1,4 +1,4 @@
-# gptouch.sh - Screen Orientation and Touchscreen Calibration Tool
+# gptouch.sh - Screen Orientation and Touchscreen Calibration Tool (updated for Gnome 46)
 
 `gptouch.sh` is a script designed to manage screen orientation and touchscreen calibration on Linux systems using GNOME on Wayland. It provides a graphical interface for easy interaction and customization.
 
@@ -11,15 +11,19 @@
 
 ## Requirements
 
-- [`gnome-randr.py`](https://github.com/fraz0815/gnome-randr/blob/master/gnome-randr.py): Required for screen arrangement and rotation in GNOME on Wayland. Please note that `gnome-randr.py` is not developed by the author of `gptouch.sh`, and full credit for `gnome-randr.py` goes to its respective creators.
+- [`gnome-randr-rust`](https://github.com/maxwellainatchi/gnome-randr-rust): Required for screen arrangement and rotation in GNOME on Wayland. Please note that `gnome-randr` is not developed by the author of `gptouch.sh`, and full credit for `gnome-randr-rust` goes to its respective creators.
 - `Zenity`: Used for creating the script's GUI. It is commonly pre-installed on many Linux distributions.
 - `sudo` privileges: Necessary for modifying system configurations and performing a reboot.
 
 ## Installation
 
-1. Ensure Zenity is installed on your system. Install it via your distribution's package manager if it's not already present.
-2. Download `gptouch.sh` and place it in a preferred directory.
-3. Make the script executable:
+1. Ensure Zenity, Cargo and gnome-randr are installed on your system:
+   - Debian: `apt install zenity`, Arch: `pacman -S zenity` etc.
+   - Cargo: `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
+   - gnome-randr: `cargo install gnome-randr`
+     
+3. Download `gptouch.sh` and place it in a preferred directory.
+4. Make the script executable:
 `chmod +x /path/to/gptouch.sh`
 
 ## Usage
@@ -34,7 +38,7 @@
 ## Hints
 
 1. Get current output name, e.g. `HDMI-1` or `DP-3` etc:
-`/path/to/gnome-randr.py --current`
+`gnome-randr`
 
 3. Get touchscreen device name:
 `lsusb`
