@@ -1,3 +1,6 @@
+# New version here, should work on x11 and wayland fully automatic, WIP
+[`gptouch-python`](https://github.com/fraz0815/gptouch-python)
+
 # gptouch.sh - Screen Orientation and Touchscreen Calibration Tool (updated for Gnome 46)
 
 `gptouch.sh` is a script designed to manage screen orientation and touchscreen calibration on Linux systems using GNOME on Wayland. It provides a graphical interface for easy interaction and customization.
